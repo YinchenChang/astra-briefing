@@ -25,10 +25,10 @@ export function GpuPlay() {
     <div className="grid gap-8 lg:grid-cols-12">
       <div className="lg:col-span-5 rounded-xl bg-surface p-4 shadow-card sm:p-6">
         <div className="mb-2 flex items-center gap-2">
-          <h3 className="font-display text-xl">這 100 天花在哪</h3>
+          <h3 className="font-display text-xl">這 100 天怎麼分</h3>
           <EvidenceTag level="estimate" />
         </div>
-        <p className="mb-4 text-sm text-muted">點圖或右側列表。面積是佔用時數，不是「模型變多大」。</p>
+        <p className="mb-4 text-sm text-muted">點圖或右側列表。面積是佔用時數，跟參數量無關。</p>
         <ClientOnly>
           <div className="h-72">
             <ResponsiveContainer>

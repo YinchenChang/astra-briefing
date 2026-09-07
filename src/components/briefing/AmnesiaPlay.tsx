@@ -33,11 +33,11 @@ export function AmnesiaPlay() {
   return (
     <div className="space-y-6">
       <div className="flex flex-wrap items-center gap-2">
-        <h3 className="font-display text-xl text-ink">失憶規則，走一次看看</h3>
+        <h3 className="font-display text-xl text-ink">考試規則走一遍</h3>
         <EvidenceTag level="official" />
       </div>
       <p className="max-w-3xl text-muted leading-relaxed">
-        把模型想成一位棋手。裁判規定：每下一子，就把他腦中的推演清掉，桌上只准留一張便條。誰能把棋局壓縮成便條上的符號，誰就能繼續下。誰把計畫留在腦子裡，下一步就從零開始。
+        考試規則很刻意：每執行一步，私有推理就被清掉，只准留下可見便條。能把局面編成符號的，下一步接得住；把計畫留在內部思考裡的，等於每步重來。
       </p>
       <div className="flex gap-2">
         {TURNS.map((step, idx) => (

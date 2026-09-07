@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@source "../src/**/*.{ts,tsx}";
+@source "../offline/**/*.{ts,tsx}";
 
 @theme {
   --color-bg: #f3f6f5;
@@ -19,8 +21,8 @@
   --color-stone: #6b7378;
   --color-stone-soft: #eef1f2;
 
-  --font-display: "Noto Serif TC", "Iwanami Mincho", "Songti TC", serif;
-  --font-sans: "Noto Sans TC", "PingFang TC", "Hiragino Sans CNS", sans-serif;
+  --font-display: "Microsoft JhengHei", "微軟正黑體", "PingFang TC", "Noto Sans TC", sans-serif;
+  --font-sans: "Microsoft JhengHei", "微軟正黑體", "PingFang TC", "Noto Sans TC", sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
 
   --radius-xs: 4px;
@@ -50,6 +52,7 @@
   h3 {
     text-wrap: balance;
     font-family: var(--font-display);
+    font-weight: 700;
   }
 
   p {

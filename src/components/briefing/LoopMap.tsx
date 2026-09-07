@@ -8,9 +8,9 @@ export function LoopMap() {
 
   return (
     <div className="space-y-6">
-      <h3 className="font-display text-xl text-ink">AI 產品服務生態還沒收口</h3>
+      <h3 className="font-display text-xl text-ink">產品服務這條鏈還沒收口</h3>
       <p className="max-w-3xl leading-relaxed text-muted">
-        上次用一張圖說：中上游自己玩，下游未形成閉環。點每個環節。實線是已經在轉的錢；虛線是還沒閉上的購買與導入。
+        上次那張圖的意思是：中上游自己在轉，下游還沒閉環。實線是已經在轉的錢，虛線是還沒閉上的購買和導入。
       </p>
       <div className="flex flex-wrap items-stretch justify-center gap-2">
         {CHAIN.map((c, i) => (
@@ -53,7 +53,7 @@ export function LoopMap() {
         <p className="mt-3 max-w-2xl leading-relaxed text-muted">{node.body}</p>
       </div>
       <p className="text-sm text-muted">
-        投資未來、中游需求高速成長，與「企業導入 / 變現困難」可以同時成立。這張圖要解釋的就是這件事。
+        投資未來、中游需求高速成長，與「企業導入 / 變現困難」可以同時成立。
       </p>
     </div>
   );

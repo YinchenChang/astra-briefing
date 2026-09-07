@@ -5,6 +5,7 @@ node_modules/
 .nitro/
 .wrangler/
 dist/
+dist-offline/
 .grok/
 screenshots/
 artifacts/
@@ -18,3 +19,5 @@ public/__grok/
 *.log
 .DS_Store
 .vite/
+/Astra-briefing-offline.html
+/Astra-briefing-offline.zip

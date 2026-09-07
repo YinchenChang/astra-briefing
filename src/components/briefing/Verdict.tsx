@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 
 export function Verdict({
-  kicker = "本週結論",
+  kicker = "判斷",
   stamp,
   children,
   className,

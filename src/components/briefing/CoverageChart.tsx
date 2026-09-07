@@ -20,7 +20,7 @@ export function CoverageChart() {
         <EvidenceTag level="official" />
       </div>
       <p className="mb-4 max-w-3xl text-sm text-muted leading-relaxed">
-        不是每關都進步 10%。Sol 幾乎過不了的關，Astra 一次打滿；兩邊都零分的關（如 G50T）仍然零分。這是質變，不是微調。
+        Sol 幾乎過不了的關，Astra 一次打滿；兩邊都零分的關（例如 G50T）仍然零分。進步集中在特定關卡。
       </p>
       <ClientOnly>
         <div className="h-80">

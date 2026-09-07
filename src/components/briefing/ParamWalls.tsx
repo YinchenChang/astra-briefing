@@ -17,15 +17,15 @@ export function ParamWalls() {
     <div className="space-y-8">
       <div>
         <div className="flex flex-wrap items-center gap-2">
-          <h3 className="font-display text-xl text-ink">三道牆，把數字收窄</h3>
+          <h3 className="font-display text-xl text-ink">三道約束</h3>
           <EvidenceTag level="estimate" />
         </div>
         <p className="mt-3 max-w-3xl text-muted leading-relaxed">
-          官方不公布參數。我們不能假裝知道精確數字，但可以把不可能的區間劃掉。點每一道牆看它砍掉什麼。
+          官方不公布參數。精確數字我們沒有，但可以把明顯不可能的區間劃掉。
         </p>
       </div>
       <div className="space-y-3">
-        {STAGES.map((s, i) => (
+        {STAGES.map((s) => (
           <div key={s.label} className="space-y-1">
             <div className="flex justify-between text-xs text-subtle">
               <span>{s.label}</span>
@@ -60,7 +60,7 @@ export function ParamWalls() {
         ))}
       </div>
       <p className="text-sm text-muted leading-relaxed">
-        中心估計：混合專家架構，總參數約 2.8–3.2 兆，每次真正醒來約 1,400–1,700 億。循環深度若存在，也只是淺層 2–4 圈，官方未承認。
+        中心估計：混合專家，總參數約 2.8–3.2 兆，每次呼叫真正用到約 1,400–1,700 億。若有循環深度，也只是淺層 2–4 圈，官方未承認。
       </p>
     </div>
   );

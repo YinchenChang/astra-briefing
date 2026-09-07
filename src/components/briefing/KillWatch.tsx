@@ -20,11 +20,11 @@ export function KillWatch() {
   return (
     <div className="space-y-8">
       <div className="flex flex-wrap items-center gap-2">
-        <h3 className="font-display text-xl text-ink">三條失效指標，現在走到哪</h3>
+        <h3 className="font-display text-xl text-ink">三條失效指標現在走到哪</h3>
         <EvidenceTag level="official" />
       </div>
       <p className="max-w-3xl leading-relaxed text-muted">
-        這三條是 8 月 25 日簡報原句。觸發任一條，原先對技術節奏或落地速度的判斷就要改。點分數或指標看本週讀法。
+        這三條是 8 月 25 日簡報原句。任一條觸發，原先對技術節奏或落地速度的判斷就要改。點分數或指標看現在怎麼讀。
       </p>
 
       <div className="rounded-xl bg-surface p-5 shadow-card sm:p-6">
@@ -70,10 +70,10 @@ export function KillWatch() {
           {marker.key === "line"
             ? "。這是失效線本身，不是某家的分數。"
             : marker.key === "adapter"
-              ? "。過線了，但考法是特製 harness，不計入指標 02。"
+              ? "。過線了，但規則是特製 harness，不計入指標 02。"
               : marker.key === "astra"
-                ? "。離 80 還有 17.3 個百分點；離 Sol 已經是八倍。"
-                : "。這是嚴考可比較的對照組。"}
+                ? "。離 80 還有 17.3 個百分點；相對 Sol 已經差一個數量級。"
+                : "。這是嚴格版本下可比較的對照組。"}
         </p>
       </div>
 
@@ -95,7 +95,7 @@ export function KillWatch() {
         ))}
       </div>
       <div className="space-y-3">
-        <Verdict kicker="本週讀法" stamp={row.status}>
+        <Verdict kicker="現在怎麼讀" stamp={row.status}>
           {row.now}
         </Verdict>
         <p className="text-sm leading-relaxed text-subtle">

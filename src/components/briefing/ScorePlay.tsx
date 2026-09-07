@@ -29,16 +29,16 @@ export function ScorePlay() {
     <div className="grid gap-6 lg:grid-cols-12">
       <div className="space-y-5 lg:col-span-4">
         <div className="flex items-center gap-2">
-          <h3 className="font-display text-xl text-ink">同一套最嚴的考法</h3>
+          <h3 className="font-display text-xl text-ink">同一套最嚴的規則</h3>
           <EvidenceTag level="official" />
         </div>
         <p className="leading-relaxed text-muted">
-          Standard：每走一步，私有思考被刪，只留便條。Adapter：官方記憶系統，思考可留過下一回合。失效指標用的是左邊。
+          Standard：每走一步，私有思考被刪，只留便條。Adapter：官方記憶，思考可留過下一回合。失效指標用的是左邊。
         </p>
         <div className="flex gap-2">
           {(
             [
-              ["standard", "嚴考 Standard"],
+              ["standard", "嚴格版本 Standard"],
               ["adapter", "特製 Adapter"],
             ] as const
           ).map(([k, label]) => (
@@ -75,15 +75,15 @@ export function ScorePlay() {
         </label>
         <dl className="grid grid-cols-2 gap-3">
           <Stat
-            label={mode === "standard" ? "嚴考分數" : "Adapter 分數"}
+            label={mode === "standard" ? "嚴格版本分數" : "Adapter 分數"}
             value={`${astra}%`}
           />
           <Stat
-            label={mode === "standard" ? "Adapter 對照" : "嚴考對照"}
+            label={mode === "standard" ? "Adapter 對照" : "嚴格版本對照"}
             value={`${mode === "standard" ? row.adapter : row.standard}%`}
-            hint="不是同一考法"
+            hint="規則不同"
           />
-          <Stat label="這次考試花費" value={`$${row.cost}k`} hint={mode === "adapter" ? "花費列的是嚴考" : undefined} />
+          <Stat label="這次考試花費" value={`$${row.cost}k`} hint={mode === "adapter" ? "花費列的是嚴格版本" : undefined} />
           <Stat
             label="這檔位"
             value={
@@ -91,16 +91,16 @@ export function ScorePlay() {
                 ? "幾乎貼頂"
                 : row.key === "low"
                   ? "低 < 不思考"
-                  : "越想越省錢"
+                  : "想清楚，花費反而下來"
             }
           />
         </dl>
         <p className="text-sm leading-relaxed text-muted">
           {mode === "adapter"
-            ? "記憶一留過下一回合，分數就停在 97% 以上。這證明 harness 仍是開關，不是模型已經「等於」80 分突破。"
+            ? "記憶一留過回合，分數就停在 97% 以上。所以 99% 不能拿來宣告指標 02。"
             : row.key === "low"
-              ? "低思考會把半套錯誤理論寫進便條，比不寫更糟。"
-              : "想得夠清楚，走的冤枉路更少，嚴考總花費反而下降。"}
+              ? "低思考會把半套錯誤假設寫進便條，比不寫更糟。"
+              : "想得夠清楚，冤枉路較少，嚴格版本總花費反而下降。"}
         </p>
       </div>
       <div className="rounded-xl bg-surface p-4 shadow-card sm:p-6 lg:col-span-8">
@@ -141,7 +141,7 @@ export function ScorePlay() {
           </div>
         </ClientOnly>
         <p className="mt-3 text-xs text-subtle">
-          Sol、Opus 始終是嚴考分數，方便對照。切到 Adapter 時，只有 Astra 這根會跳到約 99%。
+          Sol、Opus 始終是嚴格版本分數，方便對照。切到 Adapter 時，只有 Astra 這根會跳到約 99%。
         </p>
       </div>
     </div>

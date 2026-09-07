@@ -14,7 +14,7 @@ export const Route = createRootRoute({
       {
         name: "description",
         content:
-          "相對 8 月 25 日認知稿的更新：ARC-AGI-3 嚴考 62.7%、特製 harness 約 99%，以及對 OpenAI 價值捕捉三條的壓力測試。",
+          "相對 8 月 25 日認知稿：ARC-AGI-3 嚴格版本 62.7%、特製 harness 約 99%。OpenAI 價值捕捉三條仍維持。",
       },
       { name: "theme-color", content: "#0E8A84" },
     ],
@@ -25,7 +25,7 @@ export const Route = createRootRoute({
       { rel: "apple-touch-icon", href: "/__grok/icon-180.png" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600&family=Noto+Serif+TC:wght@500;600&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap",
       },
     ],
   }),

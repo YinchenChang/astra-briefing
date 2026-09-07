@@ -22,7 +22,7 @@ export function SiteNav({ active }: { active: string }) {
             </a>
           ))}
         </nav>
-        <p className="hidden text-xs text-subtle lg:block">相對 8/25 · 內部更新</p>
+        <p className="hidden text-xs text-subtle lg:block">相對 8/25</p>
       </div>
       <div className="flex gap-1 overflow-x-auto px-3 pb-2 md:hidden">
         {NAV.map((n) => (

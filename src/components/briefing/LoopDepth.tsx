@@ -21,11 +21,12 @@ export function LoopDepth() {
     <div className="mt-10 space-y-14">
       <div>
         <div className="flex flex-wrap items-center gap-2">
-          <h3 className="font-display text-xl text-ink">兩條花算力的路，不要混</h3>
+          <h3 className="font-display text-xl text-ink">兩種花算力的方式</h3>
           <EvidenceTag level="official" />
         </div>
         <p className="mt-3 max-w-3xl leading-relaxed text-muted">
-          循環深度、Looped Transformer、潛空間迴圈，講的是同一件事：同一組層被走多次，參數不隨深度線性成長。它跟現在定了價的「把思考寫成字」，是正交的第二個旋鈕。
+          循環深度、Looped Transformer、潛空間迴圈，講的是同一件事：同一組層被走多次，參數不隨深度線性成長。這跟現在已經定了價的
+          chain-of-thought，是另一條軸。
         </p>
         <div className="mt-6 grid gap-4 md:grid-cols-2">
           {LOOP_PATHS.map((path) => (
@@ -47,11 +48,11 @@ export function LoopDepth() {
 
       <div>
         <div className="flex flex-wrap items-center gap-2">
-          <h3 className="font-display text-xl text-ink">三篇不是互搶，是同一條軸的三層</h3>
+          <h3 className="font-display text-xl text-ink">三篇各自在回答什麼</h3>
           <EvidenceTag level="official" />
         </div>
         <p className="mt-3 max-w-3xl leading-relaxed text-muted">
-          Huginn 證明可以在腦子裡想；DeepLoop 告訴你圈數加下去怎麼才不炸；SMELT 把三本帳釘平，量化值不值得做。點一篇看它實際主張什麼。
+          Huginn 證明可以在潛空間裡想；DeepLoop 處理圈數加下去怎麼才不炸；SMELT 把三本帳釘平，看值不值得做。點一篇看它實際主張什麼。
         </p>
         <div className="mt-6 grid gap-3 md:grid-cols-3">
           {LOOP_PAPERS.map((item) => (
@@ -69,11 +70,7 @@ export function LoopDepth() {
               </p>
               <p className="mt-2 font-display text-xl">{item.who}</p>
               <p className={cn("mt-3 text-sm leading-relaxed", paper === item.key ? "text-paper/90" : "text-muted")}>
-                {item.role === "能不能做"
-                  ? "存在性：推理不必寫成字。"
-                  : item.role === "怎麼加得下去"
-                    ? "穩定性：讓迴圈加得下去。"
-                    : "縮放律：帳算平之後仍淨贏。"}
+                {item.blurb}
               </p>
             </button>
           ))}
@@ -89,7 +86,7 @@ export function LoopDepth() {
       </div>
 
       <div>
-        <h3 className="font-display text-xl text-ink">圈數不是免費旋鈕</h3>
+        <h3 className="font-display text-xl text-ink">圈數加下去並不便宜</h3>
         <p className="mt-3 max-w-3xl leading-relaxed text-muted">
           SMELT 與開源的 Nanbeige 獨立得到同一句：預算對齊時，兩圈最好。第三、四圈逼模型變瘦，損失回升。
         </p>
@@ -121,7 +118,7 @@ export function LoopDepth() {
       </div>
 
       <div>
-        <h3 className="font-display text-xl text-ink">產業上已經不是紙</h3>
+        <h3 className="font-display text-xl text-ink">產業上已經有人在用</h3>
         <ol className="mt-6 flex flex-wrap gap-2">
           {[
             "Huginn 2025.02",
@@ -140,22 +137,23 @@ export function LoopDepth() {
           <article className="rounded-xl bg-surface p-5 shadow-card sm:p-6">
             <p className="text-xs tracking-wide text-teal-ink">ByteDance · Ouro</p>
             <p className="mt-2 leading-relaxed text-ink">
-              14 億參數、走四圈，數學上打過 40 億的對照組。優勢被消融成「知識怎麼操作」，不是「知識有多少」。
+              14 億參數、走四圈，數學上打過 40 億的對照組。消融以後，優勢比較像操作知識的方式，較不像知識量本身。
             </p>
           </article>
           <article className="rounded-xl bg-surface p-5 shadow-card sm:p-6">
             <p className="text-xs tracking-wide text-teal-ink">Nanbeige 4.2</p>
             <p className="mt-2 leading-relaxed text-ink">
-              22 層走兩遍＝44 有效層。作者也說兩遍是最好折衷，更多遍幾乎不漲、訓練更貴——跟 SMELT 同構。
+              22 層走兩遍＝44 有效層。作者也說兩遍是最好折衷，更多遍幾乎不漲、訓練更貴，跟 SMELT 的結論一致。
             </p>
           </article>
         </div>
       </div>
 
       <div>
-        <h3 className="font-display text-xl text-ink">會改哪一層，不會改哪一層</h3>
+        <h3 className="font-display text-xl text-ink">落到訓練、服務、定價的哪一層</h3>
         <p className="mt-3 max-w-3xl leading-relaxed text-muted">
-          不會是 Transformer 取代舊架構、或 o1 那種跳躍。幅度是「同算力省一成上下 + 小模型當大模型用」，不是 10 倍。點一層看含義。
+          幅度大概是同算力省一成上下，加上小模型當較大模型用。跟 Transformer 換掉舊架構、或 o1
+          那種跳躍，量級差一截。點一層看含義。
         </p>
         <div className="mt-6 flex flex-wrap gap-2">
           {LOOP_HITS.map((item) => (
@@ -186,16 +184,16 @@ export function LoopDepth() {
         <div className="mt-6 grid gap-4 md:grid-cols-3">
           {[
             {
-              t: "若屬實，是淺層",
-              d: "Pachocki 只保證計算圖深度仍在 GPT-4 的兩倍內。這跟「兩到四圈、中間層重用」同構，不是 Huginn 那種 32 圈。",
+              t: "若屬實，比較像淺層",
+              d: "Pachocki 只保證計算圖深度仍在 GPT-4 的兩倍內。這跟兩到四圈、中間層重用對得上，對不上 Huginn 那種 32 圈。",
             },
             {
-              t: "能解釋的部分",
-              d: "「不思考」仍有 35%，可能是單步被走得更深。那是地板，不是嚴考天花板。",
+              t: "可能解釋的部分",
+              d: "「不思考」仍有 35%，有可能是單步被走得更深。那是底，撐不起嚴格版本的上限。",
             },
             {
               t: "解釋不了的部分",
-              d: "嚴考從 8% 到 63%，是便條裡的世界模型。兩圈層重用解釋不了這一截。",
+              d: "嚴格版本從 8% 到 63%，我仍歸給便條上的世界模型。兩圈層重用撐不起這一截。",
             },
           ].map((c) => (
             <article key={c.t} className="rounded-xl bg-surface p-5 shadow-card sm:p-6">
@@ -206,13 +204,13 @@ export function LoopDepth() {
         </div>
       </div>
 
-      <Verdict kicker="迴圈結論" stamp="維持主結論">
-        不是新範式，是第二個旋鈕。帳算平之後兩圈最好，省的是一成上下的訓練算力，不是 10 倍智能。Astra
-        若用了，最多抬「不思考」的地板；嚴考那一跳仍是便條裡的世界模型。
+      <Verdict kicker="對這三篇的判斷" stamp="主結論維持">
+        這比較像工程選項。預算對齊後兩圈最好，訓練算力大概省一成，談不上十倍能力。就算 Astra
+        用了，也比較像把「不思考」那一檔墊高；嚴格版本從 8% 到 63%，我仍歸給便條上的世界模型。
       </Verdict>
 
       <div>
-        <h3 className="font-display text-xl text-ink">三篇還沒關掉的洞</h3>
+        <h3 className="font-display text-xl text-ink">這三篇還沒補上的缺口</h3>
         <ul className="mt-4 grid gap-3 md:grid-cols-2">
           {LOOP_HOLES.map((item) => (
             <li key={item} className="rounded-xl bg-surface p-5 text-sm leading-relaxed text-muted shadow-card">

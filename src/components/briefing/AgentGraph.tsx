@@ -5,7 +5,7 @@ const NODES = [
   {
     id: "model",
     label: "模型",
-    body: "會思考的引擎。Astra 比 Sol 更會把規則寫成符號，但單獨不夠。",
+    body: "會思考的引擎。Astra 比 Sol 更會把規則寫成符號，但單靠它不夠。",
   },
   {
     id: "data",
@@ -15,12 +15,12 @@ const NODES = [
   {
     id: "harness",
     label: "Harness",
-    body: "記憶怎麼留、上下文怎麼切。同一顆 Astra，嚴考 63%、開官方記憶 99%。",
+    body: "記憶怎麼留、上下文怎麼切。同一顆 Astra，嚴格版本 63%、開官方記憶約 99%。",
   },
   {
     id: "tools",
     label: "工具與環境",
-    body: "瀏覽器、終端機、票務系統。沒有手，再聰明也做不完活。",
+    body: "瀏覽器、終端機、票務系統。沒接上環境，再強也做不完實際任務。",
   },
   {
     id: "verifier",
@@ -41,7 +41,7 @@ export function AgentGraph() {
   return (
     <div className="space-y-6">
       <p className="max-w-3xl text-muted leading-relaxed">
-        企業裡的 Agent 不是「換一顆更強的大腦」就完成。六項相乘，任一項是零，產出就是零。點每個環節。
+        企業端 Agent 不能只換一顆更強的模型。資料、harness、驗證缺任何一項，產出都接不起來。點每個環節。
       </p>
       <div className="flex flex-wrap items-center justify-center gap-2">
         {NODES.map((n, i) => (
